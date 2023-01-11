@@ -8,6 +8,10 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController extends AbstractController
 {
+    # Per a poder fer les migracions i utilitzar les bases de dades
+    # cal executar en el terminal el comandament:
+    # 'sudo docker exec -it 2023-truiter-symfony_web-server_1 /bin/bash'
+
     #[Route('/', name: 'index', methods: ['GET'])]
     public function index(): Response
     {
