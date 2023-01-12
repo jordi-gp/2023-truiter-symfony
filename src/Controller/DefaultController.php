@@ -12,6 +12,9 @@ class DefaultController extends AbstractController
     # cal executar en el terminal el comandament:
     # 'sudo docker exec -it 2023-truiter-symfony_web-server_1 /bin/bash'
 
+    # Per a comprovar el nom dels contenidors de docker gastar comandament:
+    # 'sudo docker ps'
+
     #[Route('/', name: 'index', methods: ['GET'])]
     public function index(): Response
     {
