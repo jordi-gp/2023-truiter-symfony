@@ -1,19 +1,13 @@
-{% extends 'base.html.twig' %}
+{% extends 'default.html.twig' %}
 
-{% block title %}Hello DefaultController!{% endblock %}
-
-{% block body %}
+{% block content %}
     {% for message in app.flashes('info') %}
         <div class="flash-notice">
             {{ message }}
         </div>
     {% endfor %}
 
-    <ul>
-        {% for tweet in tweets %}
-            <li>
-                {{ tweet.text }} (@{{ tweet.author.username }}) | {{ tweet.createdAt | date("d/m/Y") }}
-            </li>
-        {% endfor %}
-    </ul>
+    {% for tweet in tweets %}
+        {% include '_tuit.html.twig' with {truit: tweet} %}
+    {% endfor %}
 {% endblock %}
